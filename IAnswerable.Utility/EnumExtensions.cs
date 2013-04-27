@@ -1,9 +1,9 @@
-﻿using System;
-using System.ComponentModel;
-using System.Reflection;
-
-namespace IAnswerable.Utility
+﻿namespace IAnswerable.Utility
 {
+    using System;
+    using System.ComponentModel;
+    using System.Reflection;
+
     public static class EnumHelper
     {
         public static string GetDescription( Enum en)

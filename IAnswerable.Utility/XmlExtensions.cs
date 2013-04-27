@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Xml.Serialization;
-
-namespace IAnswerable.Utility
+﻿namespace IAnswerable.Utility
 {
+    using System;
+    using System.IO;
+    using System.Xml.Serialization;
+
     public static class XmlExtensions
     {
 

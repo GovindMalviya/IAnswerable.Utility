@@ -1,15 +1,6 @@
-﻿// -----------------------------------------------------------------------
-// <copyright file="NameValueCollectionExtension.cs" company="">
-// TODO: Update copyright text.
-// </copyright>
-// -----------------------------------------------------------------------
-
-namespace IAnswerable.Utility
+﻿namespace IAnswerable.Utility
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
     using System.Collections.Specialized;
     using System.Web;
 

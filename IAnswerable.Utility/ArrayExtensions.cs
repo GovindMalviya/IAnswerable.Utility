@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace IAnswerable.Utility
+﻿namespace IAnswerable.Utility
 {
+    using System;
+
     public static class ArrayExtensions
     {
+        /// <summary>
+        /// Remove element from array at given index
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="index"></param>
+        /// <returns></returns>
         public static T[] RemoveAt<T>(this T[] source, int index)
         {
             T[] dest = new T[source.Length - 1];

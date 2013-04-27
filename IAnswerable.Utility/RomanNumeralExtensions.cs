@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Text.RegularExpressions;
-namespace IAnswerable.Utility
+﻿namespace IAnswerable.Utility
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using System.Text.RegularExpressions;
+
     public static class RomanNumeralExtensions
     {
         private const int NumberOfRomanNumeralMaps = 13;
