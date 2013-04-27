@@ -11,15 +11,13 @@
         public static Nullable<T> ToNullable<T>(this object value) where T : struct
         {
             Nullable<T> result = new Nullable<T>();
-            try
+
+            if (value.IsNotNull())
             {
-                if (value.IsNotNull())
-                {
-                    TypeConverter conv = TypeDescriptor.GetConverter(typeof(T));
-                    result = (T)conv.ConvertFrom(value);
-                }
+                TypeConverter conv = TypeDescriptor.GetConverter(typeof(T));
+                result = (T)conv.ConvertFrom(value);
             }
-            catch { }
+
             return result;
         }
     }

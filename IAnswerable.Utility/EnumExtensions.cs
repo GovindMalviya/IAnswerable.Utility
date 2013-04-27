@@ -3,6 +3,8 @@
     using System;
     using System.ComponentModel;
     using System.Reflection;
+    using System.Linq;
+using System.Collections.Generic;
 
     public static class EnumHelper
     {
@@ -23,6 +25,18 @@
             }
 
             return en.ToString();
+        }
+
+        public static List<T> ToList<T>(T en)
+        {
+            Type t = typeof(T);
+
+            if (!t.IsEnum)
+            {
+                throw new ArgumentException("Type provided must be an Enum.", "T");
+            }
+
+            return Enum.GetValues(t).Cast<T>().ToList();
         }
 
         public static T EnumParse<T>(this string value)

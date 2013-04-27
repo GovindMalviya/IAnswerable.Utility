@@ -10,6 +10,11 @@
     {
         public static bool IsNotNull(this object Value)
         {
+            return !Value.IsNull();
+        }
+
+        public static bool IsNull(this object Value)
+        {
             return Value != null;
         }
 
