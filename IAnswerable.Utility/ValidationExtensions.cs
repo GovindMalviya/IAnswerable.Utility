@@ -49,7 +49,7 @@ namespace IAnswerable.Utility
 
         private static bool IsRegexMatch(string str, string pattern)
         {
-            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Regex regex = new Regex(pattern);
 
             if (regex.IsMatch(str))
             {
