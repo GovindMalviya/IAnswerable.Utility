@@ -1,5 +1,7 @@
 ﻿namespace IAnswerable.Utility
 {
+    using System;
+    using System.Text;
     using System.Text.RegularExpressions;
 
     /// <summary>
@@ -45,6 +47,16 @@
             return string.Format(s, args);
         }
 
+        public static byte[] ToByteArray(this string str)
+        {
+            if (str.IsNotNullOrEmpty())
+            {
+                throw new ArgumentException("String object must have value.", "string");
+            }
+
+            return Encoding.ASCII.GetBytes(str);
+
+        }
 
 
     }
