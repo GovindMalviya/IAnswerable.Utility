@@ -15,7 +15,7 @@
 
         public static bool IsNull(this object Value)
         {
-            return Value != null;
+            return Value == null;
         }
 
         public static string ToStringOrEmptyIfNull(this object Value)

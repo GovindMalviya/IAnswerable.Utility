@@ -24,5 +24,10 @@
 
             return destination;
         }
+
+        public static void CopyTo<T>(this T[] source, T[] destination, int length)
+        {
+            Array.Copy(source, destination, length);
+        }
     }
 }

@@ -7,13 +7,13 @@
     /// </summary>
     public static class JsonExtensions
     {
-        public static string ToJSON(this object value)
+        public static string JsonSerialize(this object value)
         {
             JavaScriptSerializer js = new JavaScriptSerializer();
             return js.Serialize(value);
         }
 
-        public static T ToJson<T>(this string value, T Object)
+        public static T JsonDeserialize<T>(this string value)
         {
             JavaScriptSerializer js = new JavaScriptSerializer();
             return js.Deserialize<T>(value);

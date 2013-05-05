@@ -3,6 +3,7 @@
     using System;
     using System.Text;
     using System.Text.RegularExpressions;
+    using System.Web;
 
     /// <summary>
     /// TODO: Update summary.
@@ -49,7 +50,7 @@
 
         public static byte[] ToByteArray(this string str)
         {
-            if (str.IsNotNullOrEmpty())
+            if (string.IsNullOrEmpty(str))
             {
                 throw new ArgumentException("String object must have value.", "string");
             }
@@ -58,6 +59,25 @@
 
         }
 
+        public static string UrlEncode(this string str)
+        {
+            return HttpUtility.UrlEncode(str);
+        }
+
+        public static string UrlDecode(this string str)
+        {
+            return HttpUtility.UrlDecode(str);
+        }
+
+        public static string HtmlEncode(this string str)
+        {
+            return HttpUtility.HtmlEncode(str);
+        }
+
+        public static string HtmlDecode(this string str)
+        {
+            return HttpUtility.HtmlDecode(str);
+        }
 
     }
 }
